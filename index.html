@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinteely GAA & Camogie — Festive Homepage Banner 2026</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cabo-green: #006837;
+      --cabo-green-dark: #004222;
+      --cabo-green-light: #009245;
+      --cabo-gold: #f4b41a;
+      --cabo-gold-hover: #ffca42;
+      --cabo-red: #c1121f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: transparent;
+      padding: 6px;
+      overflow: hidden;
+    }
+
+    .promo-shell {
+      max-width: 1140px;
+      margin: 0 auto;
+      background: linear-gradient(125deg, #072215 0%, var(--cabo-green-dark) 48%, var(--cabo-green) 100%);
+      border: 3px solid var(--cabo-gold);
+      border-radius: 22px;
+      padding: 22px 24px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 14px 30px -8px rgba(0, 45, 22, 0.35);
+    }
+
+    /* Subtle festive dot pattern */
+    .promo-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(244, 180, 26, 0.16) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+
+    /* Falling Snow inside Banner */
+    #banner-snow {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .flake {
+      position: absolute;
+      top: -16px;
+      color: rgba(255, 255, 255, 0.85);
+      user-select: none;
+      animation: bannerFall linear infinite;
+    }
+
+    @keyframes bannerFall {
+      0% { transform: translateY(-10px) translateX(0); opacity: 0.9; }
+      100% { transform: translateY(380px) translateX(12px); opacity: 0.15; }
+    }
+
+    /* Top Header Row */
+    .promo-top {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(244, 180, 26, 0.35);
+    }
+
+    .promo-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .promo-heading h2 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+      color: #ffffff;
+      letter-spacing: 0.01em;
+    }
+
+    .promo-heading h2 span {
+      color: var(--cabo-gold);
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(244, 180, 26, 0.6);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #fff3cf;
+    }
+
+    .pulse {
+      width: 9px;
+      height: 9px;
+      background: #ff4d4d;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.8);
+      animation: pulseRing 1.5s infinite;
+    }
+
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.8); }
+      70% { box-shadow: 0 0 0 9px rgba(255, 77, 77, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+    }
+
+    /* Two-Card Spotlight Grid */
+    .cards-row {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .cards-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spotlight-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      border: 1.5px solid rgba(255, 255, 255, 0.22);
+      border-radius: 16px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .spotlight-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--cabo-gold);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .card-kicker {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .kicker-gold {
+      background: var(--cabo-gold);
+      color: #1f1600;
+    }
+
+    .kicker-red {
+      background: var(--cabo-red);
+      color: #ffffff;
+    }
+
+    .spotlight-card h3 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.32rem;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .spotlight-card p {
+      font-size: 0.9rem;
+      color: #e3f5ec;
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+
+    .card-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.88rem;
+      padding: 10px 16px;
+      border-radius: 10px;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .cta-gold {
+      background: var(--cabo-gold);
+      color: #1f1600;
+    }
+
+    .cta-gold:hover {
+      background: var(--cabo-gold-hover);
+    }
+
+    .cta-white {
+      background: #ffffff;
+      color: var(--cabo-green-dark);
+    }
+
+    .cta-white:hover {
+      background: #eaf6ef;
+    }
+
+    .cta-ghost {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .cta-ghost:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="promo-shell">
+    <div id="banner-snow" aria-hidden="true"></div>
+
+    <!-- Top Strip -->
+    <div class="promo-top">
+      <div class="promo-heading">
+        <span style="font-size: 1.6rem;">🎄</span>
+        <h2>Christmas 2026 at <span>Cabinteely GAA &amp; Camogie</span></h2>
+      </div>
+      <div class="live-badge">
+        <span class="pulse"></span>
+        <span id="partyCountdown">Craic &amp; Ceol: Fri, Dec 11th • 8pm</span>
+      </div>
+    </div>
+
+    <!-- Two Spotlight Cards -->
+    <div class="cards-row">
+      <!-- Card 1: Christmas Hub -->
+      <div class="spotlight-card">
+        <div>
+          <span class="card-kicker kicker-gold">🎅 Club Festive Hub</span>
+          <h3>Christmas Hub 2026</h3>
+          <p>
+            Play our Cabo Sliotar Catch game, test your knowledge in the Christmas Quiz, check McKeever club shop deadlines, and track Santa over Kilbogget Park!
+          </p>
+        </div>
+        <div class="card-cta-row">
+          <a href="https://cabinteelygaa.com/our-news/christmas-2026" target="_top" class="cta-btn cta-gold">
+            🎄 Explore Christmas Hub →
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Craic & Ceol Night Out -->
+      <div class="spotlight-card">
+        <div>
+          <span class="card-kicker kicker-red">🎸 Fri Dec 11th • Seapoint RFC</span>
+          <h3>Christmas Craic &amp; Ceol Social</h3>
+          <p>
+            Live music from <strong>Fionn Lowry &amp; Tahlia Torpey</strong> from 8pm 'til late! Grab your €2 or €5 (3 strips) online raffle tickets before the draw.
+          </p>
+        </div>
+        <div class="card-cta-row">
+          <a href="https://cabinteelygaa.com/our-news/christmas-craic-ceol-2026" target="_top" class="cta-btn cta-white">
+            🥂 Night Out Details →
+          </a>
+          <a href="https://cabinteelygaa.clubzap.com/products/32687/purchases/new" target="_blank" rel="noopener" class="cta-btn cta-ghost">
+            🎟️ Raffle Strips (€5)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Gentle Snowfall inside the banner
+    const snowBox = document.getElementById('banner-snow');
+    const symbols = ['❄', '❅', '•'];
+    for (let i = 0; i < 20; i++) {
+      const el = document.createElement('span');
+      el.className = 'flake';
+      el.textContent = symbols[i % symbols.length];
+      el.style.left = Math.random() * 100 + '%';
+      el.style.fontSize = (Math.random() * 10 + 9) + 'px';
+      el.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      el.style.animationDelay = (Math.random() * 4) + 's';
+      snowBox.appendChild(el);
+    }
+
+    // Live Days/Hours Countdown to Craic & Ceol Night (Dec 11, 2026 8:00 PM)
+    function updateBannerTimer() {
+      const target = new Date('December 11, 2026 20:00:00').getTime();
+      const diff = target - Date.now();
+      const badge = document.getElementById('partyCountdown');
+      if (diff <= 0) {
+        badge.textContent = '🎉 Craic & Ceol is ON at Seapoint RFC!';
+        return;
+      }
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      badge.textContent = `Craic & Ceol in ${d}d ${h}h • Fri Dec 11`;
+    }
+    updateBannerTimer();
+    setInterval(updateBannerTimer, 60000);
+  </script>
+</body>
+</html>
